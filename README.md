@@ -8,6 +8,7 @@
 School of Electronic and Computer Engineering, Peking University
 
 [![arXiv](https://img.shields.io/badge/arXiv-<Paper>-<COLOR>.svg)](https://arxiv.org/abs/2410.02761)
+[![Home Page](https://img.shields.io/badge/Project_Page-<Website>-blue.svg)](https://zhipeixu.github.io/projects/FakeShield/)
 </div>
 
 ## News
