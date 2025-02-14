@@ -66,7 +66,6 @@ FakeShield is a novel multi-modal framework designed for explainable image forge
 
 - **MMTD-Set Dataset Construction.** We create the MMTD-Set by enriching existing IFDL datasets using GPT-4o, generating high-quality “image-mask-description” triplets for enhanced multimodal learning.  
 
-![alt text](assets/figure1-pipeline.png)
 
 ## 🛠️ Requirements and Installation
 
