@@ -27,7 +27,7 @@ School of Electronic and Computer Engineering, Peking University
 ---
 
 
-<details open><summary>💡 We also have other video-language projects that may interest you ✨. </summary><p>
+<details open><summary>💡 We also have other **Copyright Protection** projects that may interest you ✨. </summary><p>
 <!--  may -->
 
 > [**EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection [CVPR 2024]**](https://arxiv.org/abs/2312.08883) <br>
@@ -55,6 +55,9 @@ School of Electronic and Computer Engineering, Peking University
 
 FakeShield is a novel multi-modal framework designed for explainable image forgery detection and localization (IFDL). Unlike traditional black-box IFDL methods, FakeShield integrates multi-modal large language models (MLLMs) to analyze manipulated images, generate tampered region masks, and provide human-understandable explanations based on pixel-level artifacts and semantic inconsistencies. To improve generalization across diverse forgery types, FakeShield introduces domain tags, which guide the model to recognize different manipulation techniques effectively. Additionally, we construct MMTD-Set, a richly annotated dataset containing multi-modal descriptions of manipulated images, fostering better interpretability. Through extensive experiments, FakeShield demonstrates superior performance in detecting and localizing various forgeries, including copy-move, splicing, removal, DeepFake, and AI-generated manipulations.
 
+![alt text](assets/teasor.png)
+
+
 ## 🏆 Contributions
 
 - **FakeShield Introduction.** We introduce FakeShield, a multi-modal framework for explainable image forgery detection and localization, which is **the first** to leverage MLLMs for the IFDL task. We also propose Domain Tag-guided Explainable Forgery Detection Module(DTE-FDM) and Multimodal Forgery Localization Module (MFLM) to improve the generalization and robustness of the models
@@ -63,15 +66,16 @@ FakeShield is a novel multi-modal framework designed for explainable image forge
 
 - **MMTD-Set Dataset Construction.** We create the MMTD-Set by enriching existing IFDL datasets using GPT-4o, generating high-quality “image-mask-description” triplets for enhanced multimodal learning.  
 
-
-
+![alt text](assets/figure1-pipeline.png)
 
 ## 🛠️ Requirements and Installation
 
 * Python == 3.9
 * Pytorch == 1.13.0
 * CUDA Version == 11.6
-* Install required packages:
+
+Install required packages:
+
 ```bash
 apt update && apt install git
 pip install -r requirements.txt
@@ -87,9 +91,14 @@ pip install -e ".[train]"
 pip install flash-attn --no-build-isolation
 ```
 
+## 🤖 Quick Start Demo
+
+
+
 ## 🚀 Training & Validating
 
 ##  📚 Main Results
+
 ## 📜 Citation
 
 ```bibtex
