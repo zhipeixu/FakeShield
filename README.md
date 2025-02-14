@@ -27,7 +27,7 @@ School of Electronic and Computer Engineering, Peking University
 ---
 
 
-<details open><summary>💡 We also have other **Copyright Protection** projects that may interest you ✨. </summary><p>
+<details open><summary>💡 We also have other Copyright Protection projects that may interest you ✨. </summary><p>
 <!--  may -->
 
 > [**EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection [CVPR 2024]**](https://arxiv.org/abs/2312.08883) <br>
