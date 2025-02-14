@@ -273,7 +273,7 @@ if __name__ == "__main__":
     transform = ResizeLongestSide(args.image_size)
     model.eval()
 
-    output_path = "./demo"
+    output_path = "./playground"
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
