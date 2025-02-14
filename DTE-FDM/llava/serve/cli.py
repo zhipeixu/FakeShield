@@ -15,6 +15,56 @@ from io import BytesIO
 from transformers import TextStreamer
 
 
+
+import torchvision.models as models
+import torch.nn as nn
+from torchvision import transforms
+
+class DomainTagGenerator:
+    def __init__(self, model_path, num_classes=3, device=None):
+        """
+        Initialize the DomainTagGenerator class.
+
+        parameter:
+        - model_path (str): The path to the model weight file.
+        - num_classes (int): The number of categories in the category.
+        - device (torch.device, optional): Device type, such as 'cpu' or 'cuda'.        """
+        self.device = device if device else torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.num_classes = num_classes
+
+        self.model = models.resnet50(pretrained=False)
+        self.model.fc = nn.Linear(self.model.fc.in_features, self.num_classes)
+        self.model.load_state_dict(torch.load(model_path, map_location=self.device))
+        self.model = self.model.to(self.device)
+        self.model.eval()
+
+        self.transform = transforms.Compose([
+            transforms.Resize(256),
+            transforms.CenterCrop(224),
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+        ])
+
+    def predict(self, image_path):
+        """
+        Classification prediction of single images.
+
+        parameter:
+        - image_path (str): The path to the image file.
+
+        return:
+        - int: predicted category tags.
+        """
+        image = Image.open(image_path).convert('RGB')
+        image = self.transform(image).unsqueeze(0).to(self.device)
+
+        with torch.no_grad():
+            output = self.model(image)
+            _, predicted = torch.max(output, 1)
+            label = predicted.item()
+
+        return label
+
 def load_image(image_file):
     if image_file.startswith('http://') or image_file.startswith('https://'):
         response = requests.get(image_file)
@@ -27,8 +77,8 @@ def load_image(image_file):
 def main(args):
     # Model
     disable_torch_init()
-
-    model_name = get_model_name_from_path(args.model_path)
+    model_name = "llava-v1.5-13b"
+    DTG = DomainTagGenerator(model_path=args.DTG_path)
     tokenizer, model, image_processor, context_len = load_pretrained_model(args.model_path, args.model_base, model_name, args.load_8bit, args.load_4bit, device=args.device)
 
     if "llama-2" in model_name.lower():
@@ -56,11 +106,13 @@ def main(args):
                 roles = ('user', 'assistant')
             else:
                 roles = conv.roles
-
-
             try:
                 image_path = input("Image file path: ")
                 image = load_image(image_path)
+                label = DTG.predict(image_path)
+                # print(f'Predicted Label for image: {label}')
+
+
                 image_size = image.size
                 image_tensor = process_images([image], image_processor, model.config)
                 if type(image_tensor) is list:
@@ -73,7 +125,14 @@ def main(args):
                 
 
             try:
-                inp = input(f"{roles[0]}: ")
+                # inp = input(f"{roles[0]}: ")
+                inp = "Was this photo taken directly from the camera without any processing? Has it been tampered with by any artificial photo modification techniques such as ps? Please zoom in on any details in the image, paying special attention to the edges of the objects, capturing some unnatural edges and perspective relationships, some incorrect semantics, unnatural lighting and darkness etc."
+                if label == 0:
+                    inp = "This is a picture that is suspected to have been tampered with by AIGC inpainting. " + inp
+                elif label == 1:
+                    inp = "This is a picture that is suspected to have been tampered with by DeepFake. " + inp
+                elif label == 2:
+                    inp = "This is a picture that is suspected to have been tampered with by Photoshop. " + inp
             except EOFError:
                 inp = ""
             if not inp:
@@ -127,7 +186,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-path", type=str, default="facebook/opt-350m")
     parser.add_argument("--model-base", type=str, default=None)
-    # parser.add_argument("--image-file", type=str, required=True)
+    parser.add_argument("--DTG-path", type=str, default="ckp/DTG.pth")
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--conv-mode", type=str, default=None)
     parser.add_argument("--temperature", type=float, default=0.2)
