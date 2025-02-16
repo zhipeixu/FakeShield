@@ -31,7 +31,7 @@ def parse_args(args):
 
     # Model-specific settings
     parser.add_argument("--version", default="MBZUAI/GLaMM-GranD-Pretrained")
-    parser.add_argument("--vision_pretrained", default="./checkpoints/sam_vit_h_4b8939.pth", type=str)
+    parser.add_argument("--vision_pretrained", default="./weight/sam_vit_h_4b8939.pth", type=str)
     parser.add_argument("--vision-tower", default="openai/clip-vit-large-patch14-336", type=str)
     parser.add_argument("--conv_type", default="llava_v1", type=str, choices=["llava_v1", "llava_llama_2"])
     parser.add_argument("--tune_mm_mlp_adapter", action="store_true")

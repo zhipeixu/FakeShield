@@ -89,8 +89,8 @@ def eval_model(args):
     print(answers_file)
     os.makedirs(os.path.dirname(answers_file), exist_ok=True)
     ans_file = open(answers_file, "w")
+    print("======== DTE_FDM Detect Begin ========")
     for line in tqdm(questions):
-        idx = line["question_id"]
         image_file = line["image"]
         qs = line["text"]
         label = DTG.predict(image_file)
@@ -132,18 +132,12 @@ def eval_model(args):
 
         outputs = tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0].strip()
 
-        mask_file = image_file.replace('image', 'mask').replace('jpg', 'png')
-
         ans_id = shortuuid.uuid()
-        ans_file.write(json.dumps({"question_id": idx,
-                                    "image": image_file,
-                                    "mask": mask_file,  
-                                    "text": outputs,
-                                    "answer_id": ans_id,
-                                    "model_id": model_name,
-                                    "metadata": {}}) + "\n")
+        ans_file.write(json.dumps({"image": image_file,
+                                    "outputs": outputs}) + "\n")
         ans_file.flush()
     ans_file.close()
+    print("======== The detection result is saved to {} ========".format(args.answers_file))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

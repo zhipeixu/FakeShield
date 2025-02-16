@@ -12,7 +12,7 @@ School of Electronic and Computer Engineering, Peking University
 [![arXiv](https://img.shields.io/badge/Arxiv-2410.02761-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2410.02761) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/zhipeixu/FakeShield/blob/main/LICENSE) 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhipeixu%2FFakeShield&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-[![hf_space](https://img.shields.io/badge/🤗-Huggingface%20Checkpoint-blue.svg)](https://huggingface.co/zhipeixu/FakeShield)
+[![hf_space](https://img.shields.io/badge/🤗-Huggingface%20Checkpoint-blue.svg)](https://huggingface.co/zhipeixu/fakeshield-v1-22b)
 [![Home Page](https://img.shields.io/badge/Project_Page-FakeShield-blue.svg)](https://zhipeixu.github.io/projects/FakeShield/)
   <br>
 [![wechat](https://img.shields.io/badge/-WeChat@新智元-000000?logo=wechat&logoColor=07C160)](https://mp.weixin.qq.com/s/_ih1EycGsUTYRK15X2OrRA)
@@ -69,42 +69,238 @@ FakeShield is a novel multi-modal framework designed for explainable image forge
 
 ## 🛠️ Requirements and Installation
 
-* Python == 3.9
-* Pytorch == 1.13.0
-* CUDA Version == 11.6
+Ensure your environment meets the following requirements:
 
-Install required packages:
+- Python == 3.9
+- Pytorch == 1.13.0
+- CUDA Version == 11.6
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/zhipeixu/FakeShield.git
+    cd FakeShield
+    ```
+2. Install dependencies:
+    ```bash
+    apt update && apt install git
+    pip install -r requirements.txt
+
+    ## Install MMCV
+    git clone https://github.com/open-mmlab/mmcv
+    cd mmcv
+    git checkout v1.4.7
+    MMCV_WITH_OPS=1 pip install -e .
+    ```
+3. Install DTE-FDM:
+    ```bash
+    cd ../DTE-FDM
+    pip install -e .
+    pip install -e ".[train]"
+    pip install flash-attn --no-build-isolation
+    ```
+
+
+## 🤖 Prepare Model
+
+1. **Download FakeShield weights from Hugging Face**
+   
+   The model weights consist of three parts: `DTE-FDM`, `MFLM`, and `DTG`. For convenience, we have packaged them together and uploaded them to the [Hugging Face repository](https://huggingface.co/zhipeixu/fakeshield-v1-22b/tree/main).
+
+   We recommend using `huggingface_hub` to download the weights:
+   ```bash
+   pip install huggingface_hub
+   huggingface-cli download --resume-download zhipeixu/fakeshield-v1-22b --local-dir weight/
+   ```
+
+2. **Download pretrained SAM weight**
+   
+   In MFLM, we will use the SAM pre-training weights. You can use `wget` to download the `sam_vit_h_4b8939.pth` model:
+   ```bash
+   wget https://huggingface.co/ybelkada/segment-anything/resolve/main/checkpoints/sam_vit_h_4b8939.pth -P weight/
+   ```
+
+3. **Ensure the weights are placed correctly**
+   
+   Organize your `weight/` folder as follows:
+   ```
+    FakeShield/
+    ├── weight/
+    │   ├── fakeshield-v1-22b/
+    │   │   ├── DTE-FDM/
+    │   │   ├── MFLM/
+    │   │   ├── DTG.pth
+    │   ├── sam_vit_h_4b8939.pth
+   ```
+
+## 🚀 Quick Start
+
+### CLI Demo
+
+You can quickly run the demo script by executing:
 
 ```bash
-apt update && apt install git
-pip install -r requirements.txt
-
-git clone https://github.com/open-mmlab/mmcv
-cd mmcv
-git checkout v1.4.7
-MMCV_WITH_OPS=1 pip install -e .
-
-cd ../DTE-FDM
-pip install -e .
-pip install -e ".[train]"
-pip install flash-attn --no-build-isolation
+bash scripts/cli_demo.sh
 ```
 
-## 🤖 Quick Start Demo
+The `cli_demo.sh` script allows customization through the following environment variables:
+- `WEIGHT_PATH`: Path to the FakeShield weight directory (default: `./weight/fakeshield-v1-22b`)
+- `IMAGE_PATH`: Path to the input image (default: `./playground/image/Sp_D_CRN_A_ani0043_ani0041_0373.jpg`)
+- `DTE_FDM_OUTPUT`: Path for saving the DTE-FDM output (default: `./playground/DTE-FDM_output.jsonl`)
+- `MFLM_OUTPUT`: Path for saving the MFLM output (default: `./playground/DTE-FDM_output.jsonl`)
+
+Modify these variables to suit different use cases.
+
+## 🏋️‍♂️ Train
+
+### Training Data Preparation
+
+The training dataset consists of three types of data:
+
+1. **PhotoShop Manipulation Dataset:** [CASIAv2](https://www.kaggle.com/datasets/divg07/casia-20-image-tampering-detection-dataset), [Fantastic Reality](http://zefirus.org/MAG)
+2. **DeepFake Manipulation Dataset:** [FFHQ](https://cvlab.cse.msu.edu/dffd-dataset.html), [FaceAPP](https://cvlab.cse.msu.edu/dffd-dataset.html)
+3. **AIGC-Editing Manipulation Dataset:** SD_inpaint Dataset (Coming soon)
+4. **MMTD-Set Dataset:** MMTD-Set (Coming soon)
+
+
+### Validation Data Preparation
+
+The validation dataset consists of three types of data:
+
+1. **PhotoShop Manipulation Dataset:** [CASIA1+](https://github.com/proteus1991/PSCC-Net?tab=readme-ov-file#testing), [IMD2020](http://zefirus.org/MAG), [Columbia](https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/), [coverage](https://github.com/wenbihan/coverage), [NIST16](https://mfc.nist.gov/), [DSO](https://recodbr.wordpress.com/code-n-data/#dso1_dsi1), [Korus](https://pkorus.pl/downloads/dataset-realistic-tampering)
+2. **DeepFake Manipulation Dataset:** [FFHQ](https://cvlab.cse.msu.edu/dffd-dataset.html), [FaceAPP](https://cvlab.cse.msu.edu/dffd-dataset.html)
+3. **AIGC-Editing Manipulation Dataset:** SD_inpaint Dataset (Coming soon)
+4. **MMTD-Set Dataset:** MMTD-Set (Coming soon)
+
+Download them from the above links and organize them as follows:
+
+```bash
+├── dataset
+│   ├── photoshop
+│   │   ├── CASIAv2_Tp
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── CASIAv2_Au
+│   │   |   └── image
+│   │   ├── FR_Tp
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── FR_Au
+│   │   │   └── image
+│   │   ├── CASIAv1+_Tp
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── CASIAv1+_Au
+│   │   |   └── image
+│   │   ├── IMD2020_Tp
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── IMD2020_Au
+│   │   |   └── image
+│   │   ├── Columbia
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── coverage
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── NIST16
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── DSO
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   └── Kours
+│   │       ├── image
+│   │       └── mask
+│   ├── deepfake
+│   │   ├── FaceAPP_Train
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── FaceAPP_Val
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── FFHQ_Train
+│   │   |   └── image
+│   │   └── FFHQ_Val
+│   │       └── image
+│   ├── aigc
+│   │   ├── SD_inpaint_Train
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── SD_inpaint_Val
+│   │   |   ├── image
+│   │   |   └── mask
+│   │   ├── COCO2017_Train
+│   │   |   └── image
+│   │   └── COCO2017_Val
+│   │       └── image
+│   └── MMTD_Set
+│       └── MMTD-Set-34k.json
+```
 
 
 
-## 🚀 Training & Validating
 
-##  📚 Main Results
+
+### LoRA Finetune DTE-FDM
+
+You can fine-tune DTE-FDM using LoRA with the following script:
+
+```bash
+bash ./scripts/DTE-FDM/finetune_lora.sh
+```
+
+The script allows customization through the following environment variables:
+- `OUTPUT_DIR`: Directory for saving training output
+- `DATA_PATH`: Path to the training dataset (JSON format)
+- `WEIGHT_PATH`: Path to the pre-trained weights
+
+Modify these variables as needed to adapt the training process to different datasets and setups.
+
+### LoRA Finetune MFLM
+
+You can fine-tune MFLM using LoRA with the following script:
+
+```bash
+bash ./scripts/MFLM/finetune_lora.sh
+```
+
+The script allows customization through the following environment variables:
+- `OUTPUT_DIR`: Directory for saving training output
+- `DATA_PATH`: Path to the training dataset
+- `WEIGHT_PATH`: Path to the pre-trained weights
+- `TRAIN_DATA_CHOICE`: Selecting the training dataset
+- `VAL_DATA_CHOICE`: Selecting the validation dataset
+
+Modify these variables as needed to adapt the training process to different datasets and setups.
+
+
+## 🛠️ Test
+
+You can test FakeShield using the following script:
+
+```bash
+bash ./scripts/test.sh
+```
+
+The script allows customization through the following environment variables:
+
+- `WEIGHT_PATH`: Path to the directory containing the FakeShield model weights.
+- `QUESTION_PATH`: Path to the test dataset in JSONL format. This file can be generated using [`./playground/eval_jsonl.py`](https://github.com/zhipeixu/FakeShield/blob/main/playground/eval_jsonl.py).
+- `DTE_FDM_OUTPUT`: Path for saving the output of the DTE-FDM model.
+- `MFLM_OUTPUT`: Path for saving the output of the MFLM model.
+
+Modify these variables as needed to adapt the evaluation process to different datasets and setups.
+
 
 ## 📜 Citation
 
 ```bibtex
-    @article{xu2024fakeshield,
+    @inproceedings{xu2024fakeshield,
             title={FakeShield: Explainable Image Forgery Detection and Localization via Multi-modal Large Language Models},
             author={Xu, Zhipei and Zhang, Xuanyu and Li, Runyi and Tang, Zecheng and Huang, Qing and Zhang, Jian},
-            journal={International Conference on Learning Representations},
+            booktitle={International Conference on Learning Representations},
             year={2025}
     }
 ```

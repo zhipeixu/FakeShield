@@ -8,8 +8,6 @@ from PIL import Image
 import torch
 import torch.nn.functional as F
 from transformers import AutoTokenizer, CLIPImageProcessor
-from diffusers import AutoPipelineForInpainting
-from diffusers.utils import load_image
 
 from model.GLaMM import GLaMMForCausalLM
 from model.llava import conversation as conversation_lib
@@ -20,10 +18,13 @@ from tools.utils import DEFAULT_IM_END_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM
 from tools.markdown_utils import (markdown_default, examples, title, description, article, process_markdown, colors,
                                   draw_bbox, ImageSketcher)
 import os
+import json
 
 def parse_args(args):
     parser = argparse.ArgumentParser(description="FakeShield Model Demo")
-    parser.add_argument("--version", default="./weight/MFLM")
+    parser.add_argument("--version", default="./weight/fakeshield-v1-22b/MFLM")
+    parser.add_argument("--DTE-FDM-output", type=str)
+    parser.add_argument("--MFLM-output", type=str)
     parser.add_argument("--precision", default='bf16', type=str)
     parser.add_argument("--image_size", default=1024, type=int, help="Image size for grounding image encoder")
     parser.add_argument("--model_max_length", default=1536, type=int)
@@ -34,6 +35,10 @@ def parse_args(args):
 
     return parser.parse_args(args)
 
+
+def read_jsonl(file_path):
+    with open(file_path, "r", encoding="utf-8") as f:
+        return json.loads(f.readline().strip()) 
 
 def setup_tokenizer_and_special_tokens(args):
     """ Load tokenizer and add special tokens. """
@@ -147,41 +152,9 @@ def prepare_mask(input_image, image_np, pred_masks, text_output, color_history):
     return save_img, seg_mask
 
 
-def generate_new_image(st_pipe, input_str, input_image):
-    global mask_path
-    if mask_path is None:
-        raise gr.Error("No Segmentation Mask")
-
-    og_image = load_image(input_image)
-    st_image, c_box = center_crop(og_image)
-    im_height = st_image.size[0]
-    st_image = st_image.resize((1024, 1024))
-    st_mask = load_image(mask_path)
-    st_mask, c_box = center_crop(st_mask)
-    st_mask = st_mask.resize((1024, 1024))
-
-    st_generator = torch.Generator(device="cuda").manual_seed(0)
-    st_out = st_pipe(
-        prompt=input_str, image=st_image, mask_image=st_mask, guidance_scale=8.0, num_inference_steps=20, strength=0.99,
-        generator=st_generator, ).images[0]
-
-    st_out = st_out.resize((im_height, im_height))
-    feathered_mask = create_feathered_mask(st_out.size)
-    og_image.paste(st_out, c_box, feathered_mask)
-    st_text_out = "Sure, Here's the new image"
-    st_text_out = process_markdown(st_text_out, [])
-
-    return og_image, st_text_out
-
-
 def inference(input_str, all_inputs, follow_up, generate):
     bbox_img = all_inputs['boxes']
     input_image = all_inputs['image']
-
-    print("input_str: ", input_str, "input_image: ", input_image)
-
-    if generate:
-        return generate_new_image(st_pipe, input_str, input_image)
 
     if not follow_up:
         conv = conversation_lib.conv_templates[args.conv_type].copy()
@@ -239,7 +212,6 @@ def inference(input_str, all_inputs, follow_up, generate):
     text_output = tokenizer.decode(output_ids, skip_special_tokens=False)
     text_output = text_output.replace("\n", "").replace("  ", " ")
     text_output = text_output.split("ASSISTANT: ")[-1]
-    print("text_output: ", text_output)
 
     # For multi-turn conversation
     conv.messages.pop()
@@ -264,8 +236,19 @@ def inference(input_str, all_inputs, follow_up, generate):
     # return output_image, markdown_out
     return seg_mask, output_str
 
+
 if __name__ == "__main__":
     args = parse_args(sys.argv[1:])
+    DTE_FDM_output = read_jsonl(args.DTE_FDM_output)
+    input_image = DTE_FDM_output.get("image", "")
+    input_text = DTE_FDM_output.get("outputs", "")
+    if "has not been tampered with" in input_text:
+        print("The image has not been tampered with.")
+        print("No mask generated.")
+        sys.exit(0)
+    
+    print("======== MFLM Model Loading ========")
+
     tokenizer = setup_tokenizer_and_special_tokens(args)
     model = initialize_model(args, tokenizer)
     model = prepare_model_for_inference(model, args)
@@ -273,26 +256,23 @@ if __name__ == "__main__":
     transform = ResizeLongestSide(args.image_size)
     model.eval()
 
-    output_path = "./playground"
+    print("======== DTE_FDM Model Loaded ========")
+
+    output_path = args.MFLM_output
     if not os.path.exists(output_path):
         os.makedirs(output_path)
+
+    print("======== MLFM Localization Begin ========")
 
     conv = None
     # Only to Display output
     conv_history = {'user': [], 'model': []}
     mask_path = None
 
-    while True:
-        try:
-            input_image = input("Please input the image path: ")
-            filename = os.path.basename(input_image)
-            input_text = input("Please input the text: ")
-            output_image, markdown_out = inference(input_text, {'image': input_image, 'boxes': []}, False, False)
-            # output_image.show()
-            print("Output: ", markdown_out)
-            save_path = os.path.join(output_path, filename)
-            output_image.save(save_path)
-            print("Mask saved to: ", save_path, "\n")
-        except Exception as e:
-            print(e)
-            continue
+    filename = os.path.basename(input_image)
+    output_image, markdown_out = inference(input_text, {'image': input_image, 'boxes': []}, False, False)
+    # output_image.show()
+    save_path = os.path.join(output_path, filename)
+    output_image.save(save_path)
+    print("======== Mask saved to: ", save_path, " ========\n")
+
