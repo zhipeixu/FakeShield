@@ -176,67 +176,70 @@ The validation dataset consists of three types of data:
 Download them from the above links and organize them as follows:
 
 ```bash
-├── dataset
-│   ├── photoshop
-│   │   ├── CASIAv2_Tp
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── CASIAv2_Au
-│   │   |   └── image
-│   │   ├── FR_Tp
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── FR_Au
-│   │   │   └── image
-│   │   ├── CASIAv1+_Tp
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── CASIAv1+_Au
-│   │   |   └── image
-│   │   ├── IMD2020_Tp
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── IMD2020_Au
-│   │   |   └── image
-│   │   ├── Columbia
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── coverage
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── NIST16
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── DSO
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   └── Kours
-│   │       ├── image
-│   │       └── mask
-│   ├── deepfake
-│   │   ├── FaceAPP_Train
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── FaceAPP_Val
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── FFHQ_Train
-│   │   |   └── image
-│   │   └── FFHQ_Val
-│   │       └── image
-│   ├── aigc
-│   │   ├── SD_inpaint_Train
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── SD_inpaint_Val
-│   │   |   ├── image
-│   │   |   └── mask
-│   │   ├── COCO2017_Train
-│   │   |   └── image
-│   │   └── COCO2017_Val
-│   │       └── image
-│   └── MMTD_Set
-│       └── MMTD-Set-34k.json
+dataset/
+├── photoshop/                # PhotoShop Manipulation Dataset
+│   ├── CASIAv2_Tp/           # CASIAv2 Tampered Images
+│   │   ├── image/
+│   │   └── mask/
+│   ├── CASIAv2_Au/           # CASIAv2 Authentic Images
+│   │   └── image/
+│   ├── FR_Tp/                # Fantastic Reality Tampered Images
+│   │   ├── image/
+│   │   └── mask/
+│   ├── FR_Au/                # Fantastic Reality Authentic Images
+│   │   └── image/
+│   ├── CASIAv1+_Tp/          # CASIAv1+ Tampered Images
+│   │   ├── image/
+│   │   └── mask/
+│   ├── CASIAv1+_Au/          # CASIAv1+ Authentic Images
+│   │   └── image/
+│   ├── IMD2020_Tp/           # IMD2020 Tampered Images
+│   │   ├── image/
+│   │   └── mask/
+│   ├── IMD2020_Au/           # IMD2020 Authentic Images
+│   │   └── image/
+│   ├── Columbia/             # Columbia Dataset
+│   │   ├── image/
+│   │   └── mask/
+│   ├── coverage/             # Coverage Dataset
+│   │   ├── image/
+│   │   └── mask/
+│   ├── NIST16/               # NIST16 Dataset
+│   │   ├── image/
+│   │   └── mask/
+│   ├── DSO/                  # DSO Dataset
+│   │   ├── image/
+│   │   └── mask/
+│   └── Korus/                # Korus Dataset
+│       ├── image/
+│       └── mask/
+│
+├── deepfake/                 # DeepFake Manipulation Dataset
+│   ├── FaceAPP_Train/        # FaceAPP Training Data
+│   │   ├── image/
+│   │   └── mask/
+│   ├── FaceAPP_Val/          # FaceAPP Validation Data
+│   │   ├── image/
+│   │   └── mask/
+│   ├── FFHQ_Train/           # FFHQ Training Data
+│   │   └── image/
+│   └── FFHQ_Val/             # FFHQ Validation Data
+│       └── image/
+│
+├── aigc/                     # AIGC Editing Manipulation Dataset
+│   ├── SD_inpaint_Train/     # Stable Diffusion Inpainting Training Data
+│   │   ├── image/
+│   │   └── mask/
+│   ├── SD_inpaint_Val/       # Stable Diffusion Inpainting Validation Data
+│   │   ├── image/
+│   │   └── mask/
+│   ├── COCO2017_Train/       # COCO2017 Training Data
+│   │   └── image/
+│   └── COCO2017_Val/         # COCO2017 Validation Data
+│       └── image/
+│
+└── MMTD_Set/                 # Multi-Modal Tamper Description Dataset
+    └── MMTD-Set-34k.json     # JSON Training File
 ```
 
 
