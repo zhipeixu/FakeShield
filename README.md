@@ -69,20 +69,21 @@ FakeShield is a novel multi-modal framework designed for explainable image forge
 
 ## 🛠️ Requirements and Installation
 
-Ensure your environment meets the following requirements:
+> **Note**: If you want to reproduce the results from our paper, please prioritize using the Docker image to set up the environment. For more details, see this [issue](https://github.com/zhipeixu/FakeShield/issues/20).
 
-- Python == 3.9
-- Pytorch == 1.13.0
-- CUDA Version == 11.6
+### Installation via Pip
 
-### Installation
+1. Ensure your environment meets the following requirements:
+    - Python == 3.9
+    - Pytorch == 1.13.0
+    - CUDA Version == 11.6
 
-1. Clone the repository:
+2. Clone the repository:
     ```bash
     git clone https://github.com/zhipeixu/FakeShield.git
     cd FakeShield
     ```
-2. Install dependencies:
+3. Install dependencies:
     ```bash
     apt update && apt install git
     pip install -r requirements.txt
@@ -93,12 +94,47 @@ Ensure your environment meets the following requirements:
     git checkout v1.4.7
     MMCV_WITH_OPS=1 pip install -e .
     ```
-3. Install DTE-FDM:
+4. Install DTE-FDM:
     ```bash
     cd ../DTE-FDM
     pip install -e .
     pip install -e ".[train]"
     pip install flash-attn --no-build-isolation
+    ```
+
+### Installation via Docker
+
+1. Pull the pre-built Docker image:
+    ```bash
+    docker pull zhipeixu/dte-fdm
+    docker pull zhipeixu/mflm
+    ```
+
+2. Clone the repository:
+    ```bash
+    git clone https://github.com/zhipeixu/FakeShield.git
+    cd FakeShield
+    ```
+
+3. Run the container:
+    ```bash
+    docker run --gpus all -it --rm \
+        -v $(pwd):/workspace/FakeShield \
+        zhipeixu/dte-fdm:latest /bin/bash
+    
+    docker run --gpus all -it --rm \
+        -v $(pwd):/workspace/FakeShield \
+        zhipeixu/mflm:latest /bin/bash
+    ```
+
+4. Inside the container, navigate to the repository:
+    ```bash
+    cd /workspace/FakeShield
+    ```
+
+5. Install MMCV:
+    ```bash
+    git clone https://github.com/open-mmlab/mmcv
     ```
 
 
@@ -279,7 +315,7 @@ The script allows customization through the following environment variables:
 Modify these variables as needed to adapt the training process to different datasets and setups.
 
 
-## 🛠️ Test
+## 🎯 Test
 
 You can test FakeShield using the following script:
 
@@ -295,6 +331,11 @@ The script allows customization through the following environment variables:
 - `MFLM_OUTPUT`: Path for saving the output of the MFLM model.
 
 Modify these variables as needed to adapt the evaluation process to different datasets and setups.
+
+##  📚 Main Results
+
+### Comparison of detection performance with advanced IFDL methods
+
 
 
 ## 📜 Citation
