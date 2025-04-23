@@ -11,8 +11,9 @@ School of Electronic and Computer Engineering, Peking University
 
 [![arXiv](https://img.shields.io/badge/Arxiv-2410.02761-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2410.02761) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/zhipeixu/FakeShield/blob/main/LICENSE) 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzhipeixu%2FFakeShield&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=zhipeixu.FakeShield)
 [![hf_space](https://img.shields.io/badge/🤗-Huggingface%20Checkpoint-blue.svg)](https://huggingface.co/zhipeixu/fakeshield-v1-22b)
+[![hf_space](https://img.shields.io/badge/🤗-MMTD%20Set%2034k-blue.svg)](https://huggingface.co/datasets/zhipeixu/MMTD-Set-34k)
 [![Home Page](https://img.shields.io/badge/Project_Page-FakeShield-blue.svg)](https://zhipeixu.github.io/projects/FakeShield/)
   <br>
 [![wechat](https://img.shields.io/badge/-WeChat@新智元-000000?logo=wechat&logoColor=07C160)](https://mp.weixin.qq.com/s/_ih1EycGsUTYRK15X2OrRA)
@@ -46,7 +47,8 @@ School of Electronic and Computer Engineering, Peking University
 
 
 ## 📰 News
-* **[2025.02.14]** 🤗  We are progressively open-sourcing **all code & pre-trained model weights**. Welcome to **watch** 👀 this repository for the latest updates.
+* **[2025.04.23]** 🤗  We have open-sourced the **MMTD-Set-34k** dataset on Hugging Face, and you can access it from [here](https://huggingface.co/datasets/zhipeixu/MMTD-Set-34k).
+* **[2025.02.14]** 🤗  We ~~are progressively open-sourcing~~ have open-sourced **all code & pre-trained model weights**. Welcome to **watch** 👀 this repository for the latest updates.
 * **[2025.01.23]** 🎉🎉🎉 Our FakeShield has been accepted at ICLR 2025! 
 * **[2024.10.03]**  🔥 We have released **FakeShield: Explainable Image Forgery Detection and Localization via Multi-modal Large Language Models**. We present explainable IFDL tasks, constructing the MMTD-Set dataset and the FakeShield framework. Check out the [paper](https://arxiv.org/abs/2410.02761). The code and dataset are coming soon
 
