@@ -199,7 +199,7 @@ The training dataset consists of three types of data:
 1. **PhotoShop Manipulation Dataset:** [CASIAv2](https://www.kaggle.com/datasets/divg07/casia-20-image-tampering-detection-dataset), [Fantastic Reality](http://zefirus.org/MAG)
 2. **DeepFake Manipulation Dataset:** [FFHQ](https://cvlab.cse.msu.edu/dffd-dataset.html), [FaceAPP](https://cvlab.cse.msu.edu/dffd-dataset.html)
 3. **AIGC-Editing Manipulation Dataset:** SD_inpaint Dataset (Coming soon)
-4. **MMTD-Set Dataset:** MMTD-Set (Coming soon)
+4. **MMTD-Set Dataset:** [MMTD-Set](https://huggingface.co/datasets/zhipeixu/MMTD-Set-34k)
 
 
 ### Validation Data Preparation
@@ -209,7 +209,7 @@ The validation dataset consists of three types of data:
 1. **PhotoShop Manipulation Dataset:** [CASIA1+](https://github.com/proteus1991/PSCC-Net?tab=readme-ov-file#testing), [IMD2020](http://zefirus.org/MAG), [Columbia](https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/), [coverage](https://github.com/wenbihan/coverage), [NIST16](https://mfc.nist.gov/), [DSO](https://recodbr.wordpress.com/code-n-data/#dso1_dsi1), [Korus](https://pkorus.pl/downloads/dataset-realistic-tampering)
 2. **DeepFake Manipulation Dataset:** [FFHQ](https://cvlab.cse.msu.edu/dffd-dataset.html), [FaceAPP](https://cvlab.cse.msu.edu/dffd-dataset.html)
 3. **AIGC-Editing Manipulation Dataset:** SD_inpaint Dataset (Coming soon)
-4. **MMTD-Set Dataset:** MMTD-Set (Coming soon)
+4. **MMTD-Set Dataset:** [MMTD-Set](https://huggingface.co/datasets/zhipeixu/MMTD-Set-34k)
 
 Download them from the above links and organize them as follows:
 
