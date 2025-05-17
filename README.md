@@ -39,9 +39,9 @@ School of Electronic and Computer Engineering, Peking University
 > Xuanyu Zhang, Youmin Xu, Runyi Li, Jiwen Yu, Weiqi Li, Zhipei Xu, Jian Zhang <br>
 [![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/xuanyuzhang21/EditGuard)  [![github](https://img.shields.io/github/stars/xuanyuzhang21/EditGuard.svg?style=social)](https://github.com/xuanyuzhang21/EditGuard) [![arXiv](https://img.shields.io/badge/Arxiv-2404.16824-b31b1b.svg?logo=arXiv)](https://arxiv.org/pdf/2404.16824) <br>
 
-> [**GS-Hider: Hiding Messages into 3D Gaussian Splatting [NeurlPS 2024]**](https://arxiv.org/pdf/2405.15118) <br>
-> Xuanyu Zhang, Jiarui Meng, Runyi Li, Zhipei Xu, Yongbing Zhang, Jian Zhang <br>
-[![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/xuanyuzhang21/GS-Hider)  [![github](https://img.shields.io/github/stars/xuanyuzhang21/GS-Hider.svg?style=social)](https://github.com/xuanyuzhang21/GS-Hider) [![arXiv](https://img.shields.io/badge/Arxiv-2405.15118-b31b1b.svg?logo=arXiv)](https://arxiv.org/pdf/2405.15118) <br>
+> [**OmniGuard: Hybrid Manipulation Localization via Augmented Versatile Deep Image Watermarking [CVPR 2025]**](https://arxiv.org/abs/2412.01615) <br>
+> Xuanyu Zhang, Zecheng Tang, Zhipei Xu, Runyi Li, Youmin Xu, Bin Chen, Feng Gao, Jian Zhang <br>
+[![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/xuanyuzhang21/EditGuard)  [![github](https://img.shields.io/github/stars/xuanyuzhang21/OmniGuard.svg?style=social)](https://github.com/xuanyuzhang21/OmniGuard) [![arXiv](https://img.shields.io/badge/Arxiv-2412.01615-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2412.01615) <br>
 
 </p></details>
 
