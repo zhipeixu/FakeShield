@@ -47,6 +47,7 @@ School of Electronic and Computer Engineering, Peking University
 
 
 ## 📰 News
+* **[2025.05.29]** 🔥🔥🔥  We have open-sourced the **SD_Inpaint** dataset on Hugging Face, and you can access it from [here](https://huggingface.co/datasets/zhipeixu/SD_inpaint_dataset).
 * **[2025.04.23]** 🤗  We have open-sourced the **MMTD-Set-34k** dataset on Hugging Face, and you can access it from [here](https://huggingface.co/datasets/zhipeixu/MMTD-Set-34k).
 * **[2025.02.14]** 🤗  We ~~are progressively open-sourcing~~ have open-sourced **all code & pre-trained model weights**. Welcome to **watch** 👀 this repository for the latest updates.
 * **[2025.01.23]** 🎉🎉🎉 Our FakeShield has been accepted at ICLR 2025! 
@@ -198,7 +199,7 @@ The training dataset consists of three types of data:
 
 1. **PhotoShop Manipulation Dataset:** [CASIAv2](https://www.kaggle.com/datasets/divg07/casia-20-image-tampering-detection-dataset), [Fantastic Reality](http://zefirus.org/MAG)
 2. **DeepFake Manipulation Dataset:** [FFHQ](https://cvlab.cse.msu.edu/dffd-dataset.html), [FaceAPP](https://cvlab.cse.msu.edu/dffd-dataset.html)
-3. **AIGC-Editing Manipulation Dataset:** SD_inpaint Dataset (Coming soon)
+3. **AIGC-Editing Manipulation Dataset:** [SD_inpaint Dataset](https://huggingface.co/datasets/zhipeixu/SD_inpaint_dataset)
 4. **MMTD-Set Dataset:** [MMTD-Set](https://huggingface.co/datasets/zhipeixu/MMTD-Set-34k)
 
 
@@ -208,7 +209,7 @@ The validation dataset consists of three types of data:
 
 1. **PhotoShop Manipulation Dataset:** [CASIA1+](https://github.com/proteus1991/PSCC-Net?tab=readme-ov-file#testing), [IMD2020](http://zefirus.org/MAG), [Columbia](https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/), [coverage](https://github.com/wenbihan/coverage), [NIST16](https://mfc.nist.gov/), [DSO](https://recodbr.wordpress.com/code-n-data/#dso1_dsi1), [Korus](https://pkorus.pl/downloads/dataset-realistic-tampering)
 2. **DeepFake Manipulation Dataset:** [FFHQ](https://cvlab.cse.msu.edu/dffd-dataset.html), [FaceAPP](https://cvlab.cse.msu.edu/dffd-dataset.html)
-3. **AIGC-Editing Manipulation Dataset:** SD_inpaint Dataset (Coming soon)
+3. **AIGC-Editing Manipulation Dataset:** [SD_inpaint Dataset](https://huggingface.co/datasets/zhipeixu/SD_inpaint_dataset)
 4. **MMTD-Set Dataset:** [MMTD-Set](https://huggingface.co/datasets/zhipeixu/MMTD-Set-34k)
 
 Download them from the above links and organize them as follows:
@@ -334,9 +335,6 @@ The script allows customization through the following environment variables:
 
 Modify these variables as needed to adapt the evaluation process to different datasets and setups.
 
-##  📚 Main Results
-
-### Comparison of detection performance with advanced IFDL methods
 
 
 
