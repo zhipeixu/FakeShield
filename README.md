@@ -31,13 +31,13 @@ School of Electronic and Computer Engineering, Peking University
 <details open><summary>💡 We also have other Copyright Protection projects that may interest you ✨. </summary><p>
 <!--  may -->
 
+> [**AvatarShield: Visual Reinforcement Learning for Human-Centric Video Forgery Detection**](https://arxiv.org/abs/2505.15173) <br>
+> Zhipei Xu, Xuanyu Zhang, Xing Zhou, Jian Zhang <br>
+[![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/zhipeixu/AvatarShield)  [![github](https://img.shields.io/github/stars/zhipeixu/AvatarShield.svg?style=social)](https://github.com/zhipeixu/AvatarShield) [![arXiv](https://img.shields.io/badge/Arxiv-2505.15173-b31b1b.svg?logo=arXiv)](https://arxiv.org/pdf/2505.15173) <br>
+
 > [**EditGuard: Versatile Image Watermarking for Tamper Localization and Copyright Protection [CVPR 2024]**](https://arxiv.org/abs/2312.08883) <br>
 > Xuanyu Zhang, Runyi Li, Jiwen Yu, Youmin Xu, Weiqi Li, Jian Zhang <br>
 [![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/xuanyuzhang21/EditGuard)  [![github](https://img.shields.io/github/stars/xuanyuzhang21/EditGuard.svg?style=social)](https://github.com/xuanyuzhang21/EditGuard) [![arXiv](https://img.shields.io/badge/Arxiv-2312.08883-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2312.08883) <br>
-
-> [**V2A-Mark: Versatile Deep Visual-Audio Watermarking for Manipulation Localization and Copyright Protection [ACM MM 2024]**](https://arxiv.org/pdf/2404.16824) <br>
-> Xuanyu Zhang, Youmin Xu, Runyi Li, Jiwen Yu, Weiqi Li, Zhipei Xu, Jian Zhang <br>
-[![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/xuanyuzhang21/EditGuard)  [![github](https://img.shields.io/github/stars/xuanyuzhang21/EditGuard.svg?style=social)](https://github.com/xuanyuzhang21/EditGuard) [![arXiv](https://img.shields.io/badge/Arxiv-2404.16824-b31b1b.svg?logo=arXiv)](https://arxiv.org/pdf/2404.16824) <br>
 
 > [**OmniGuard: Hybrid Manipulation Localization via Augmented Versatile Deep Image Watermarking [CVPR 2025]**](https://arxiv.org/abs/2412.01615) <br>
 > Xuanyu Zhang, Zecheng Tang, Zhipei Xu, Runyi Li, Youmin Xu, Bin Chen, Feng Gao, Jian Zhang <br>
