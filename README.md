@@ -109,8 +109,8 @@ FakeShield is a novel multi-modal framework designed for explainable image forge
 
 1. Pull the pre-built Docker image:
     ```bash
-    docker pull zhipeixu/dte-fdm
-    docker pull zhipeixu/mflm
+    docker pull zhipeixu/mflm:v1.0
+    docker pull zhipeixu/dte-fdm:v1.0
     ```
 
 2. Clone the repository:
