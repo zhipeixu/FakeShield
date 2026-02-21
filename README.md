@@ -47,7 +47,7 @@ School of Electronic and Computer Engineering, Peking University
 
 
 ## 📰 News
-* **[2025.05.29]** 🔥🔥🔥  We have open-sourced the **SD_Inpaint** dataset on Hugging Face, and you can access it from [here](https://huggingface.co/datasets/zhipeixu/SD_inpaint_dataset).
+* **[2026.02.21]** 🔥🔥🔥  We have updated the **SD_Inpaint** dataset on Hugging Face, and you can access it from [here](https://huggingface.co/datasets/zhipeixu/SD_inpaint_dataset).
 * **[2025.04.23]** 🤗  We have open-sourced the **MMTD-Set-34k** dataset on Hugging Face, and you can access it from [here](https://huggingface.co/datasets/zhipeixu/MMTD-Set-34k).
 * **[2025.02.14]** 🤗  We ~~are progressively open-sourcing~~ have open-sourced **all code & pre-trained model weights**. Welcome to **watch** 👀 this repository for the latest updates.
 * **[2025.01.23]** 🎉🎉🎉 Our FakeShield has been accepted at ICLR 2025! 
