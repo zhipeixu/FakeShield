@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01522-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the image has been tampered with/description of the tampered area: The image appears to be authentic and not tampered with. It seems to be a direct capture from a camera with consistent syntax and semantics.\n\n2. Judgment basis: To confirm the authenticity of this image among deepfake tampered pictures, one would look for natural asymmetries in facial features, consistent lighting and shadows that match the direction and intensity of the light source, natural skin texture and tone, and reflections in the eyes that correspond with the light source. Additionally, the proportions of the face would be expected to be realistic and appropriate for the individual's age and gender. Any accessories, such as earrings or glasses, would have correct edges, lighting relationships, and perspective. The hair would have natural color and texture, without abrupt changes that might suggest digital alteration."
+}

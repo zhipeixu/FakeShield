@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01791-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the image has been tampered with/description of the tampered area: The image appears authentic and shows no signs of tampering. The visible portion of hair and skin texture suggests a natural photograph without digital manipulation.\n\n2. Judgment basis: The hair strands have a natural flow and varying shades of color that are consistent with real hair, indicating that this is a real face picture. If placed among deepfake tampered pictures, the natural inconsistency in hair flow and texture, as well as the realistic skin tone visible at the edge, would stand out against the often too-perfect or homogenous textures found in deepfakes."
+}

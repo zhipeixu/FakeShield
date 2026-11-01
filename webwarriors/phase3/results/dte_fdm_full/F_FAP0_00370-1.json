@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00370-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the areas of the hair, ears, and peripheral regions of the face. The hair appears to have been altered with pink and purple tones that are not consistent with natural hair coloration. The ears also show signs of manipulation, with the left ear (from the viewer's perspective) appearing to have an unnatural shape and lack of detail.\n\n2. Judgment basis:\n- The hair exhibits an unnatural color combination of pink and purple, which is not commonly found in natural hair.\n- The left ear has an irregular shape and lacks the level of detail present in a natural ear, suggesting it has been altered.\n- The edges of the hair and ears against the background do not blend seamlessly, indicating potential manipulation.\n- There is a lack of consistency in the lighting and shadows on the hair and ears compared to the rest of the image, which may point to tampering."
+}

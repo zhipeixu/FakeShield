@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_02383-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the mouth and chin. The tampered area includes the lips, teeth, and the lower part of the face.\n\n2. Judgment basis:\n- The edges of the mouth and chin show signs of manipulation, with the teeth appearing unnaturally white and overly uniform.\n- The skin texture around the tampered area differs from the rest of the face, indicating a possible alteration.\n- The lighting on the tampered area does not match the rest of the face, suggesting that the mouth and chin have been digitally altered or replaced.\n- The proportions of the mouth and chin seem inconsistent with the upper part of the face, which could be a result of the tampering process."
+}

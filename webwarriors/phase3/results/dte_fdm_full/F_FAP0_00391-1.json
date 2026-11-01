@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00391-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the glasses on the person's face.\n\n2. Judgment basis:\n- The glasses exhibit irregularities, particularly around the rims and frames, which are not consistent with typical glasses designs.\n- The lenses of the glasses show inconsistencies in reflection and lighting, which do not match the surrounding environment.\n- The temples of the glasses appear distorted and do not align properly with the ears, suggesting manipulation in that area.\n- The frames of the glasses have an unnatural curvature and lack the expected rigidity, indicating they have been altered."
+}

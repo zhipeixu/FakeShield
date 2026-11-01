@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00878-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the image has been tampered with/description of the tampered area: The image appears to be authentic and not tampered with. The visible parts of the image show natural textures and colors consistent with a photograph taken directly by a camera.\n\n2. Judgment basis: The visible portions of the image, such as the knit texture of the hat and the natural folds of the clothing, suggest that the image is real. The lighting on the hat and clothing appears consistent, with no signs of mismatched shadows or highlights that would indicate manipulation. The edges of the hat and clothing are clear and show no signs of blurring or distortion that would suggest digital alteration. If this image were placed among deepfake tampered images, it would stand out due to the natural textures, consistent lighting, and lack of any obvious digital artifacts."
+}

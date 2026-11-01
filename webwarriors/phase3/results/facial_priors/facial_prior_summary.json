@@ -1,0 +1,13 @@
+{
+  "metadata_records": 6309,
+  "dte_records": 20,
+  "matched_unique_images": 20,
+  "unmatched_dte_records": 0,
+  "status_counts": {
+    "ok": 18,
+    "no_region_keyword_match": 2
+  },
+  "output_index": "/workspace/ml_project/FakeShield/phase3/results/facial_priors/facial_prior_metadata.jsonl",
+  "prior_map_directory": "/workspace/ml_project/FakeShield/phase3/results/facial_priors/maps",
+  "note": "Prototype prior generation only; maps are not yet integrated into MFLM/SAM or trained."
+}

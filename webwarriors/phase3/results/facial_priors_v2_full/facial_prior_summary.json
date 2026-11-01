@@ -1,0 +1,13 @@
+{
+  "metadata_records": 6309,
+  "dte_records": 6309,
+  "matched_unique_images": 6309,
+  "unmatched_dte_records": 0,
+  "status_counts": {
+    "ok": 5374,
+    "fallback_face_prior_no_region_keyword_match": 935
+  },
+  "output_index": "/workspace/ml_project/FakeShield/phase3/results/facial_priors_v2_full/facial_prior_metadata.jsonl",
+  "prior_map_directory": "/workspace/ml_project/FakeShield/phase3/results/facial_priors_v2_full/maps",
+  "note": "V2 prototype only; narrower local Gaussians and explicit face-prior fallback. Not integrated into MFLM/SAM or trained."
+}

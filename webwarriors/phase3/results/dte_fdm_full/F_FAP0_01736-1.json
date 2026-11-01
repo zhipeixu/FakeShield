@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01736-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the face where it meets the hair on the forehead and temples, as well as a small area near the right cheek.\n\n2. Judgment basis: \n- The tampered area on the forehead and temples shows an unnatural transition between the hair and the skin, indicating a possible alteration of the hairline or the interface between the face and hair.\n- The small tampered area near the right cheek could suggest an alteration in the skin texture or the presence of an object that was not originally there."
+}

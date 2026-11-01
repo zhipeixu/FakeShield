@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01108-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the eyes, including the eyebrows, eyelids, and the surrounding areas.\n\n2. Judgment basis:\n- The tampered area includes the eyes, which are a common target for deepfake manipulation due to their expressive nature and importance in human communication.\n- The eyebrows and eyelids are areas that can be altered to change the expression or identity of a person, making them a likely target for deepfake technology.\n- The surrounding regions of the eyes may also show signs of manipulation, such as inconsistent lighting or blurred edges, which are common indicators of deepfake tampering."
+}

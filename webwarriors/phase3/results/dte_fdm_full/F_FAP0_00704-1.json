@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00704-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the beard and mouth. The tampered area includes the lower part of the face, covering the beard and mouth.\n\n2. Judgment basis:\n- The beard and mouth exhibit an unnatural texture compared to the surrounding skin, indicating a manipulation of the facial hair and possibly the lips.\n- There is a noticeable distortion around the edges of the beard and mouth, which is not consistent with the natural lines and contours of a face.\n- The lighting on the beard does not match the lighting on the rest of the face, suggesting that the beard may have been digitally added or altered.\n- The mouth, particularly the lips, may show signs of manipulation, such as an unnatural shape or lack of consistent shading that would normally be present due to natural lighting."
+}

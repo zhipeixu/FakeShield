@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01340-3.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the areas of the mouth, nose, and cheeks. The tampered area includes the lips, teeth, and the region around the nose and cheeks.\n\n2. Judgment basis:\n- The teeth appear overly uniform and lack the natural variation in shape and spacing.\n- The skin texture around the tampered areas, especially near the cheeks and nose, seems unnaturally smooth and lacks the typical pores and fine lines found in a real face.\n- The lighting on the tampered areas does not match the rest of the face, with shadows and highlights appearing inconsistent with the natural lighting of the image.\n- The edges of the tampered areas, particularly around the mouth and nose, show signs of blurring, which is not present in the untampered areas.\n- The proportions of the mouth and nose seem slightly off, with the mouth appearing larger than expected and the nose not aligning properly with the rest of the facial features."
+}

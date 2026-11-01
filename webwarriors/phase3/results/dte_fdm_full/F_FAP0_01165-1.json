@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01165-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region covering the left side of the face, including the left eye, left cheek, and a portion of the left side of the nose.\n\n2. Judgment basis:\n- The left eye in the image shows signs of manipulation, with the shape and position appearing unnatural compared to a typical human eye.\n- The left cheek area has an inconsistent skin texture, which does not match the surrounding facial skin, indicating tampering.\n- The left side of the nose also appears to be affected, with the contour and shading not aligning with the expected natural shadows and highlights of a nose."
+}

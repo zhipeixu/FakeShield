@@ -1,0 +1,20 @@
+PHASE 3 FACIAL-PRIOR SUBGROUP ANALYSIS
+======================================================
+Evaluated records: 6248
+Matched with prior metadata: 6248
+Missing prior metadata: 0
+
+STATUS GROUPS (exclusive)
+fallback_face_prior_no_region_keyword_match (n=900): IoU 0.119392 -> 0.117225 (delta -0.002167); F1 0.186864 -> 0.183392 (delta -0.003472); IoU up/down/same 387/427/86
+ok (n=5348): IoU 0.143505 -> 0.143179 (delta -0.000326); F1 0.224423 -> 0.224029 (delta -0.000394); IoU up/down/same 3250/1953/145
+
+REGION GROUPS (overlapping; an image can occur in multiple groups)
+cheeks (n=3141): IoU 0.160019 -> 0.160211 (delta +0.000193); F1 0.248275 -> 0.248620 (delta +0.000346); IoU up/down/same 1925/1180/36
+eyes (n=3649): IoU 0.160331 -> 0.160402 (delta +0.000072); F1 0.248811 -> 0.249027 (delta +0.000216); IoU up/down/same 2278/1342/29
+forehead (n=3019): IoU 0.157836 -> 0.156898 (delta -0.000939); F1 0.244827 -> 0.243432 (delta -0.001395); IoU up/down/same 1690/1247/82
+jaw (n=3165): IoU 0.159913 -> 0.159638 (delta -0.000275); F1 0.247857 -> 0.247623 (delta -0.000234); IoU up/down/same 1914/1208/43
+mouth (n=3827): IoU 0.157009 -> 0.156998 (delta -0.000011); F1 0.244208 -> 0.244364 (delta +0.000156); IoU up/down/same 2426/1373/28
+nose (n=3670): IoU 0.159571 -> 0.159628 (delta +0.000057); F1 0.247708 -> 0.247900 (delta +0.000191); IoU up/down/same 2305/1338/27
+whole_face (n=3673): IoU 0.152718 -> 0.153207 (delta +0.000489); F1 0.237623 -> 0.238419 (delta +0.000796); IoU up/down/same 2254/1320/99
+
+Note: subgroup results are descriptive. Region groups overlap; use validation data for method selection and held-out data for final claims.

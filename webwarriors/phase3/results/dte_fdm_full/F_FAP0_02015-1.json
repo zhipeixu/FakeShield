@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_02015-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the mouth and nose. The tampered area includes the lips, the area around the nostrils, and the lower part of the nose.\n\n2. Judgment basis:\n- The lips exhibit an unnatural texture and the line separating the lips appears overly defined, lacking the subtle variations typically found in a natural setting.\n- The area around the nostrils shows signs of manipulation, with the edges appearing too sharp and lacking the natural shadows and highlights one would expect to see.\n- The lower part of the nose does not blend seamlessly with the surrounding skin, indicating a possible alteration in that region."
+}

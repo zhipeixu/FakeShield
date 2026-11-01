@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01089-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the areas of the mouth, nose, and cheeks. The tampered regions include the lips, the area around the nostrils, and the skin texture on the cheeks.\n\n2. Judgment basis:\n- The lips exhibit an unnatural texture and lack the typical lines and creases found in a real human face.\n- The skin texture on the cheeks appears overly smooth and lacks the natural variation in tone and texture.\n- The area around the nostrils shows signs of distortion, which is not consistent with the rest of the facial features."
+}

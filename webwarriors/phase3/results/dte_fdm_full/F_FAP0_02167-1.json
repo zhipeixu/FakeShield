@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_02167-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the tassel on the left side of the image.\n\n2. Judgment basis: The tampered area shows a lack of continuity in the tassel's texture and color, indicating that the original content may have been altered or replaced. The edges of the tampered area appear unnaturally smooth and lack the detailed fibrous quality expected of a tassel. Additionally, the lighting on the tampered section does not match the rest of the image, as it lacks the natural shadows and highlights present on the rest of the tassel, suggesting that the tampered area was not originally part of the image."
+}

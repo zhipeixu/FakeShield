@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00032-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the mouth and chin region. The tampered area includes the lips, teeth, and the lower part of the chin.\n\n2. Judgment basis:\n- The teeth appear overly uniform and lack the natural variation in shape and spacing.\n- The lips exhibit an unnatural smoothness and lack the typical texture and lines found in a real human's lips.\n- The chin area below the lips shows signs of blurring, which is not consistent with the sharpness of the rest of the face.\n- There is a noticeable lack of natural shadows and highlights around the tampered area, particularly around the lips and teeth, which would normally have more defined shadows and highlights due to the contours of the face.\n- The skin texture in the tampered area differs from the surrounding skin, indicating a possible blending of different skin textures."
+}

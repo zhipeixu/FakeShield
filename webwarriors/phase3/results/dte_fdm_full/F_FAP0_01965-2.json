@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01965-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, covering the entire face from the hairline to the chin, including the ears.\n\n2. Judgment basis:\n- The tampered area includes the forehead, eyes, eyebrows, nose, cheeks, mouth, lips, chin, and ears.\n- The hair and neck appear to be untampered.\n- The tampered region shows a uniform alteration, indicating a complete face swap or significant modification.\n- There are no visible details to analyze the tampering effects due to the blurring of the face."
+}

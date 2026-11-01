@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00999-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the hat and the area immediately surrounding it.\n\n2. Judgment basis:\n- The tampered area includes the upper part of the hat, which shows an inconsistency in texture and color compared to the rest of the hat.\n- There is a clear distinction between the tampered area and the adjacent regions, indicating a possible alteration of the original image.\n- The lighting on the tampered area does not match the rest of the image, suggesting manipulation."
+}

@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01734-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the forehead and the hairline. The tampered area includes the top of the forehead and extends down to the hairline, affecting the hair and the skin at the very top of the head.\n\n2. Judgment basis:\n- The tampered area shows an unnatural transition between the forehead and the hair, with a lack of natural hair texture and an abrupt change in skin tone.\n- There is a noticeable difference in skin texture and tone at the tampered area compared to the surrounding skin, indicating manipulation.\n- The edge of the tampered area, particularly where the hair meets the forehead, lacks the natural irregularities and strands of hair that would typically be present.\n- The lighting on the tampered area does not match the rest of the image, with an inconsistency in shadow and highlight placement."
+}

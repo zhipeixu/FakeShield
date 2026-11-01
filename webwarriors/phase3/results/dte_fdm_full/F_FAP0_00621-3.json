@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00621-3.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, affecting the entire face including the forehead, eyes, eyebrows, nose, cheeks, mouth, lips, chin, and jawline. The hair on the left side of the face and the ear also appear to be part of the tampered area.\n\n2. Judgment basis:\n- The tampered area shows a lack of natural skin texture, appearing unnaturally smooth.\n- There is a noticeable distortion around the edges of the face, indicating manipulation.\n- The lighting on the face does not match the surrounding areas, suggesting inconsistency in lighting.\n- Facial features such as the eyes, nose, and mouth may exhibit unnatural symmetry or proportions.\n- The hair on the left side of the face seems to be affected, potentially showing signs of altered hairstyle or hair color.\n- The ear may have irregularities in shape or position, which is not typical for an unaltered image."
+}

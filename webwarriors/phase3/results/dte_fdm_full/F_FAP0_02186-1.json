@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_02186-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the subject's right cheek and jawline.\n\n2. Judgment basis:\n- The tampered area shows an unnatural smoothness and lack of texture compared to the surrounding skin, indicating a possible alteration in skin texture.\n- There is a noticeable discrepancy in the lighting and shadow on the tampered area, which does not match the natural lighting of the scene.\n- The edge of the tampered area appears to be unnaturally straight and lacks the typical gradual transition of skin tone and texture found in an unaltered image."
+}

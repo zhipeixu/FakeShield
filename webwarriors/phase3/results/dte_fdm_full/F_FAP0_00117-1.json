@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00117-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the face, excluding the hair and neck.\n\n2. Judgment basis:\n- The tampered area shows an unnatural smoothness and lack of texture compared to the surrounding hair and neck, which have more defined and natural features.\n- There is a clear distinction between the tampered area and the untouched areas, indicating a manipulation boundary.\n- The lighting on the face does not match the lighting on the hair and neck, suggesting inconsistency in lighting direction and intensity.\n- The facial features are missing, which is a definitive sign of tampering, as natural faces would show some level of detail."
+}

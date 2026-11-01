@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00625-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region covering the left side of the face, including the left eye, left cheek, and part of the left ear and hair.\n\n2. Judgment basis:\n- The left eye in the tampered area appears to have an unnatural shape and lacks consistent reflections compared to a typical eye.\n- The left cheek shows signs of distortion, which is not in harmony with the rest of the face.\n- The edge of the left ear and the hair on the left side exhibit an unnatural transition, suggesting manipulation in these regions.\n- The lighting on the tampered left side of the face does not match the lighting on the rest of the face, indicating inconsistency in the image."
+}

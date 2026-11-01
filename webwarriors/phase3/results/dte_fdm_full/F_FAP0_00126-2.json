@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00126-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the hand and the object being held, which appears to be a hat or a similar headwear.\n\n2. Judgment basis: \n- The edges of the hand and the object show signs of manipulation, with the hand's outline appearing unnaturally smooth and lacking in detail compared to a typical human hand.\n- The lighting on the hand does not match the surrounding area, suggesting that the hand and the object have been inserted or altered.\n- The object being held, which seems to be a hat, has an unnatural appearance with a lack of consistent texture and shading that would be expected from the material of a hat."
+}

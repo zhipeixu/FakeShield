@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01953-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the areas of the eyes, nose, mouth, and cheeks. The tampering includes alterations to the glasses, the eyes behind the glasses, the nose, and the mouth.\n\n2. Judgment basis:\n- The glasses show signs of manipulation, with the frames and lenses appearing distorted and unnatural.\n- The eyes behind the glasses exhibit inconsistencies in reflection and texture, indicating they have been altered.\n- The nose appears to have been modified, with the shape and shadows not aligning with the rest of the face.\n- The mouth and surrounding area show signs of distortion, suggesting that the expression or shape has been altered.\n- The cheeks have an unnatural smoothness and lack of texture compared to the rest of the face, indicating tampering in these areas as well."
+}

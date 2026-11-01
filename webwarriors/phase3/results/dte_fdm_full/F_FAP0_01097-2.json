@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01097-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the hair region on the left side of the image.\n\n2. Judgment basis:\n- The hair on the left side shows an unnatural transition in color and texture compared to the rest of the hair, indicating a possible alteration.\n- There is a lack of consistency in the hair strands' direction and flow, which is not typical of natural hair movement.\n- The edge of the tampered area in the hair appears to have a slightly blurred boundary, which is a common artifact of image manipulation."
+}

@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/phase3/pilot_images/F_FAP0_00004-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the hair on the left side of the head, extending from the temple area down to the jawline and neck.\n\n2. Judgment basis:\n- The hair on the left side shows an unnatural transition in texture and color compared to the rest of the hair, indicating manipulation.\n- There is a noticeable distortion where the tampered hair meets the original hair, lacking the natural flow one would expect in unaltered hair.\n- The lighting on the tampered hair does not match the lighting on the rest of the hair, suggesting an inconsistency typically seen in edited images."
+}

@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00150-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region covering the eyes and the bridge of the nose. The tampered area includes the eyebrows, eyes, eyelids, and the upper part of the nose.\n\n2. Judgment basis:\n- The eyebrows appear to have an unnatural shape and lack the typical texture and fine hair details.\n- The eyes, including the eyelids and the surrounding area, show signs of manipulation, with the lighting and shadows not matching the rest of the face.\n- The upper part of the nose, particularly the area just below the eyebrows, has inconsistencies in texture and lighting compared to the rest of the nose."
+}

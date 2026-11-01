@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01357-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the regions of the eyes, nose, mouth, and chin. The tampered areas include the eyebrows, eyes, the bridge and sides of the nose, the nostrils, the area around the mouth including the lips, and the chin area.\n\n2. Judgment basis:\n- The eyebrows appear to have an unnatural shape and texture, suggesting they have been altered.\n- The eyes, particularly the irises, seem to have inconsistencies in reflection and lighting, indicating manipulation.\n- The nose, especially the bridge and sides, shows signs of distortion, which is not typical for an unaltered photograph.\n- The mouth and lips exhibit an unnatural symmetry and texture, which are common indicators of digital manipulation.\n- The chin area has an irregular texture and contour that does not match the rest of the face, pointing to tampering in that region."
+}

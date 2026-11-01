@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00649-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the hat and the upper part of the head. The tampering extends from the top of the hat down to the upper part of the head, covering the entire region where the hat meets the hair and forehead.\n\n2. Judgment basis:\n- The edges of the hat show signs of manipulation, with a lack of natural blending into the hair and forehead.\n- The texture and lighting on the tampered area do not match the surrounding regions, indicating a possible alteration.\n- The tampered area lacks the natural shadows and highlights that would be expected from the hat's interaction with the light source.\n- There is an unnatural straight line running across the hat, which is not consistent with the expected curvature of a hat."
+}

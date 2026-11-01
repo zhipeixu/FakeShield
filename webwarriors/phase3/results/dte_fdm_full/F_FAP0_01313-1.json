@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01313-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the areas of the beard, mouth, and chin. The beard appears to have an unnatural texture and the mouth seems to have an irregular shape.\n\n2. Judgment basis:\n- The beard shows an inconsistent texture compared to the surrounding skin, indicating it may have been digitally altered or added.\n- The mouth and lips exhibit an unnatural shape and contour, which does not align with typical facial proportions.\n- The chin area has an irregular shape, suggesting manipulation to alter the contour of the face."
+}

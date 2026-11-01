@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01284-3.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the glasses on the left side of the face, extending to the temple and the area around the left eye.\n\n2. Judgment basis:\n- The temple area of the glasses shows signs of distortion and unnatural blending with the skin.\n- The left eye region has inconsistencies in lighting and shadow, which do not match the rest of the face.\n- The frame of the glasses on the left side appears to have an irregular shape and does not align properly with the expected contour of glasses.\n- The skin texture around the tampered area, particularly near the temple, seems inconsistent with the rest of the face, indicating manipulation."
+}

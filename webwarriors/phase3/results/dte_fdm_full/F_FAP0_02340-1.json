@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_02340-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the hand holding a smartphone. The tampered area includes the entire hand and the smartphone it is interacting with.\n\n2. Judgment basis:\n- The edges of the hand and the smartphone appear unnaturally smooth and lack the typical texture and detail expected in a photograph.\n- The lighting on the hand does not match the overall lighting of the scene, suggesting that the hand and smartphone were inserted into the image.\n- The perspective of the hand holding the smartphone seems inconsistent with the rest of the image, as the angle and position of the hand do not align naturally with the perspective of the face and background.\n- The skin tone of the hand does not match the visible skin tone on the face, indicating a discrepancy in skin texture and color."
+}

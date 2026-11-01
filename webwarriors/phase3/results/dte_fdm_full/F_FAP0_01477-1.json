@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01477-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the hair on the right side of the head, extending from the temple area down to the ear and jawline.\n\n2. Judgment basis:\n- The hair on the right side shows an inconsistency in texture compared to the rest of the hair, appearing smoother and lacking detailed strands.\n- The edge of the hair near the temple and jawline lacks natural shadows and highlights that would typically be present, indicating manipulation.\n- The ear's shape and the way it connects to the head seems unnatural, suggesting that it has been altered or reconstructed.\n- There is a noticeable difference in the skin tone and texture near the tampered hair region, which does not match the rest of the visible skin, indicating a possible blending of images or alteration of the skin in that area."
+}

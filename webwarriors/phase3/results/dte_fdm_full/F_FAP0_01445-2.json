@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01445-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the regions of the ears and the peripheral areas of the face. The tampering includes alterations to the shape and details of the ears, as well as potential modifications to the hairline and sideburns.\n\n2. Judgment basis:\n- The edges of the ears and the hairline show signs of manipulation, with possible inconsistencies in the texture and lighting compared to the rest of the image.\n- The tampered areas may exhibit unnatural symmetry or proportions that do not align with the rest of the face.\n- There could be discrepancies in the skin tone or texture at the boundaries of the tampered regions, indicating digital alteration.\n- If accessories such as earrings were present, they might show irregularities in their appearance or reflections that suggest tampering."
+}

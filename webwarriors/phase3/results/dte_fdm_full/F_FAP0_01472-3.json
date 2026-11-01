@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_01472-3.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the areas of the hair, ears, and neck. The hair appears to have been altered, particularly on the left side, and the ears seem to have been modified as well. The neck area also shows signs of tampering.\n\n2. Judgment basis:\n- The hair on the left side shows an unnatural transition in texture and possibly color, indicating it has been tampered with.\n- The ears have an inconsistent appearance, with the left ear looking different in shape and position compared to the right ear.\n- The neck area has an unnatural smoothness and lacks the typical texture and shadows one would expect, suggesting manipulation in that region."
+}

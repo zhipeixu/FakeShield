@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00778-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the microphone that the subject is holding.\n\n2. Judgment basis:\n- The microphone appears to have an unnatural edge and lacks the expected shadows and highlights that would be present due to the lighting in the environment.\n- The texture and color of the microphone do not match the surrounding area, indicating a possible inconsistency in lighting and texture.\n- The microphone's position in relation to the subject's hand seems slightly off, suggesting an unnatural perspective or placement."
+}

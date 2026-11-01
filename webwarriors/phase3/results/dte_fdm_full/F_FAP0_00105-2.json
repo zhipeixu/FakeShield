@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00105-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the glasses on the left side of the face, covering the left eye, the bridge of the nose, and extending slightly to the left cheek and jawline.\n\n2. Judgment basis:\n- The glasses exhibit irregularities, particularly around the left lens and frame, which do not align properly with the expected perspective and contours of glasses.\n- The left eye area shows signs of distortion, with the shape and position of the eye appearing unnatural compared to the right eye.\n- The skin texture on the left cheek and jawline seems inconsistent with the rest of the face, indicating manipulation in these areas.\n- The lighting on the left side of the face does not match the rest of the image, suggesting that the tampered area has been altered in a way that does not conform to the natural lighting of the scene."
+}

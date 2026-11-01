@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00181-2.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the picture has been tampered with / Description of the tampered area: The picture has been tampered with, specifically in the region of the headphones on the left side of the image.\n\n2. Judgment basis:\n- The tampered area includes the headphones, which exhibit an unnatural edge and a lack of consistent lighting compared to the surrounding areas.\n- The headphones appear to be floating without any support, which defies the physical laws of how headphones would normally rest on a person's head.\n- The color and texture of the tampered area do not match the rest of the image, indicating a possible inconsistency in resolution or a blending of different images."
+}

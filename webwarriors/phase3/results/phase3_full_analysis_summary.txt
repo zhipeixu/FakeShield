@@ -1,0 +1,19 @@
+PHASE 3 PER-IMAGE ANALYSIS
+====================================================
+Input CSV: phase3/results/phase3_full_metrics.csv
+Valid paired images: 6248
+
+MACRO AVERAGES
+Baseline IoU: 0.140032
+Refined IoU:  0.139441
+IoU delta:    -0.000591
+Baseline F1:  0.219012
+Refined F1:   0.218175
+F1 delta:     -0.000837
+
+PER-IMAGE CHANGES
+IoU improved / worsened / unchanged: 3637 / 2380 / 231
+F1 improved / worsened / unchanged:  3637 / 2380 / 231
+
+Note: Per-image improvement counts do not replace the aggregate
+macro-average comparison. Report all results transparently.

@@ -1,0 +1,5 @@
+{
+  "image": "/workspace/ml_project/FakeShield/dataset/deepfake/FaceAPP_Train/image/F_FAP0_00676-1.png",
+  "DTG_label": 1,
+  "outputs": " 1. Whether the image has been tampered with/description of the tampered area: The image appears authentic and has not been tampered with. The visible parts of the image show natural characteristics consistent with a photograph taken directly by a camera.\n\n2. Judgment basis: The hair strands have a natural flow and varying shades of color that are typical of real hair, indicating no digital alteration. The ear's shape and the shadows within it align with the natural contours expected in an unaltered photo. The clothing's texture and the way it drapes on the body suggest a real-life scenario. If placed among deepfake images, this image would stand out due to the natural inconsistencies and imperfections that are usually absent in deepfaked images, such as the authentic texture of the hair and the realistic shadowing on the ear."
+}
